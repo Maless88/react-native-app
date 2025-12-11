@@ -1,83 +1,83 @@
+import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-function HomeScreen(): JSX.Element {
+
+function HomeScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar style="light" />
       <View style={styles.hero}>
         <Text style={styles.eyebrow}>Benvenuto</Text>
-        <Text style={styles.title}>La tua nuova app ? pronta</Text>
+        <Text style={styles.title}>La tua nuova app è pronta</Text>
         <Text style={styles.subtitle}>
           Personalizza la schermata iniziale, aggiungi sezioni e collega la navigazione quando sei pronto.
         </Text>
-        <View style={styles.actions}>
-          <TouchableOpacity style={styles.primaryButton} activeOpacity={0.9}>
-            <Text style={styles.primaryLabel}>Inizia</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.linkButton} activeOpacity={0.8}>
-            <Text style={styles.linkLabel}>Scopri di più?</Text>
-          </TouchableOpacity>
-        </View>
+      </View>
+      <View style={styles.actions}>
+        <TouchableOpacity style={styles.primaryButton} activeOpacity={0.9}>
+          <Text style={styles.primaryLabel}>Inizia</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.linkButton} activeOpacity={0.8}>
+          <Text style={styles.linkLabel}>Scopri di più</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
 }
 
+export default HomeScreen;
+
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#0f172a",
+    backgroundColor: "#101018",
+    paddingHorizontal: 24,
+    paddingVertical: 32
   },
   hero: {
     flex: 1,
-    paddingHorizontal: 24,
-    justifyContent: "center",
+    justifyContent: "center"
   },
   eyebrow: {
-    color: "#93c5fd",
-    letterSpacing: 1,
-    fontSize: 12,
-    textTransform: "uppercase",
-    marginBottom: 8,
+    color: "#999",
+    fontSize: 14,
+    marginBottom: 4
   },
   title: {
-    color: "#e2e8f0",
-    fontSize: 28,
+    color: "#fff",
+    fontSize: 26,
     fontWeight: "700",
-    marginBottom: 10,
+    marginBottom: 8
   },
   subtitle: {
-    color: "#cbd5e1",
-    fontSize: 16,
-    lineHeight: 22,
-    marginBottom: 22,
+    color: "#ccc",
+    fontSize: 15,
+    lineHeight: 20
   },
   actions: {
-    flexDirection: "row",
-    alignItems: "center",
     gap: 12,
+    paddingBottom: 24
   },
   primaryButton: {
-    backgroundColor: "#2563eb",
-    paddingHorizontal: 18,
-    paddingVertical: 12,
-    borderRadius: 12,
+    backgroundColor: "#4f46e5",
+    paddingVertical: 14,
+    borderRadius: 8,
+    alignItems: "center"
   },
   primaryLabel: {
-    color: "#e2e8f0",
+    color: "#fff",
     fontWeight: "600",
-    fontSize: 15,
+    fontSize: 16
   },
   linkButton: {
-    paddingHorizontal: 4,
-    paddingVertical: 10,
+    alignItems: "center",
+    paddingVertical: 10
   },
   linkLabel: {
-    color: "#93c5fd",
-    fontWeight: "600",
-    fontSize: 15,
-  },
+    color: "#a5b4fc",
+    fontSize: 14,
+    textDecorationLine: "underline"
+  }
 });
-
-export default HomeScreen;
