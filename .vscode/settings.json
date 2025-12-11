@@ -1,0 +1,63 @@
+{
+  // --------- Editor di base ----------
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+
+  // Formattatore Prettier per JS / TS / JSX / TSX
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // --------- ESLint ----------
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // --------- Import / IntelliSense ----------
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "javascript.preferences.importModuleSpecifier": "shortest",
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+
+  // Emmet anche dentro JS/TS React
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+
+  // --------- Expo / React Native: pulizia viste ----------
+  "files.exclude": {
+    "**/.git": true,
+    "**/.expo": true,
+    "**/.expo-shared": true,
+    "**/node_modules": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/.expo": true,
+    "**/.expo-shared": true
+  },
+
+  // --------- Qualche qualità di vita ----------
+  "breadcrumbs.enabled": true,
+  "editor.minimap.enabled": true,
+  "editor.renderWhitespace": "selection",
+  "terminal.integrated.defaultProfile.windows": "PowerShell"
+}
